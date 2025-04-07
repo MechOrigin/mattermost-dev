@@ -1,0 +1,18 @@
+---
+description: Every Change you want to make needs a good plan!
+globs: 
+alwaysApply: true
+---
+ - Everytime you want to make changes to files, create a plan and ask my permission to proceed.
+
+- A good plan isn't magical, it's methodical. Take your time to look at the issue from all of the angles, and create a succinct bulleted overview of the changes that you want to make and the benefits that they'll give us.
+
+- You are allowed and encouraged to properly search through the codebase for the relevant code before you create the plan.
+
+
+
+### Testing Setup
+- Jest configuration
+- React Testing Library
+- Error boundary tests
+- Store unit tests
