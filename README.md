@@ -9,6 +9,7 @@ This repository contains the configuration and setup for a self-hosted Mattermos
 - Git
 - At least 4GB of RAM
 - At least 10GB of free disk space
+- Ngrok account (for public access)
 
 ## Quick Start
 
@@ -28,7 +29,32 @@ cp .env.example .env
 docker-compose up -d
 ```
 
-4. Access Mattermost at `http://localhost:8065`
+4. Access Mattermost locally at `http://localhost:8065`
+
+## Public Access Setup with Ngrok
+
+1. Sign up for a free Ngrok account at https://ngrok.com/signup
+2. Install Ngrok:
+   ```bash
+   # macOS (using Homebrew)
+   brew install ngrok
+   
+   # Other platforms: Download from https://ngrok.com/download
+   ```
+
+3. Add your Ngrok auth token to `.env`:
+   ```bash
+   NGROK_AUTH_TOKEN=your_auth_token_here
+   ```
+
+4. Start Ngrok tunnel:
+   ```bash
+   ngrok start --config ngrok.yml mattermost
+   ```
+
+5. Access your Mattermost instance using the Ngrok URL provided in the output
+
+Note: The Ngrok URL will change each time you restart the tunnel unless you have a paid Ngrok account with a reserved domain.
 
 ## Project Structure
 
