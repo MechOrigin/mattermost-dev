@@ -99,25 +99,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 For issues and feature requests, please use the GitHub issue tracker.
 
-## Development URLs 🔗
-
-### Mattermost Channel
-- AlertManager Dev Channel: http://138.68.249.92:8065/solheim-tech/channels/alertmanager-dev
-
-### Webhooks
-- AlertManager Webhook: http://138.68.249.92:8065/hooks/ou4n5jny43fp5mttzmdokpuh1a
-
-### Monitoring Integration 🔔
-
-#### AlertManager Configuration
-The Mattermost server is configured with AlertManager integration:
-- AlertManager URL: http://138.68.249.92:9093
-- Notification Channel: alertmanager-dev
-- Team: solheim-tech
-- Webhook Token: ou4n5jny43fp5mttzmdokpuh1a
-
-All Prometheus alerts will be automatically forwarded to the AlertManager dev channel.
-
 ### Cool Technical Stuff (For the Grown-ups) 🔧
 
 Our development environment is set up with:

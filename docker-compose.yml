@@ -49,17 +49,4 @@ services:
       test: ["CMD", "curl", "-f", "http://localhost:8065/api/v4/system/ping"]
       interval: 10s
       timeout: 5s
-      retries: 5
-
-  alertmanager:
-    image: prom/alertmanager:latest
-    container_name: alertmanager
-    restart: unless-stopped
-    volumes:
-      - ./alertmanager.yml:/etc/alertmanager/alertmanager.yml
-      - ./template:/etc/alertmanager/template
-    ports:
-      - "0.0.0.0:9093:9093"
-    command:
-      - '--config.file=/etc/alertmanager/alertmanager.yml'
-      - '--storage.path=/alertmanager' 
+      retries: 5 
