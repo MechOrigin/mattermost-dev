@@ -1,60 +1,43 @@
 # Mattermost Self-Hosted Platform
 
-This repository contains the configuration and setup for a self-hosted Mattermost instance using Docker. Mattermost is an open-source, self-hostable team collaboration platform that provides secure, flexible messaging and collaboration solutions.
+Hey there! 👋 This is your very own Mattermost chat server that you can run on your computer. Think of it like having your own private Discord or Slack!
 
-## Prerequisites
+## What You Need First
+- Docker Desktop (like a special container for running apps)
+- Git (to download and save your work)
+- A computer with:
+  - At least 4GB of memory (RAM)
+  - At least 10GB of free space
 
-- Docker Engine (version 20.10.0 or later)
-- Docker Compose (version 2.0.0 or later)
-- Git
-- At least 4GB of RAM
-- At least 10GB of free disk space
-- Ngrok account (for public access)
+## Super Easy Setup Guide! 🚀
 
-## Quick Start
-
-1. Clone this repository:
+### Step 1: Get Everything Ready
+1. Open your Terminal (it's like a command center for your computer)
+2. Copy this project to your computer:
 ```bash
 git clone https://github.com/yourusername/mattermost-dev.git
 cd mattermost-dev
 ```
 
-2. Configure your environment:
+### Step 2: Set Up Your Server
+1. Make a copy of the example settings file:
 ```bash
 cp .env.example .env
 ```
 
-3. Start the Mattermost platform:
+2. Start your Mattermost server:
 ```bash
 docker-compose up -d
 ```
 
-4. Access Mattermost locally at `http://localhost:8065`
+3. Check if it works by opening: `http://localhost:8065` in your web browser
 
-## Public Access Setup with Ngrok
-
-1. Sign up for a free Ngrok account at https://ngrok.com/signup
-2. Install Ngrok:
-   ```bash
-   # macOS (using Homebrew)
-   brew install ngrok
-   
-   # Other platforms: Download from https://ngrok.com/download
-   ```
-
-3. Add your Ngrok auth token to `.env`:
-   ```bash
-   NGROK_AUTH_TOKEN=your_auth_token_here
-   ```
-
-4. Start Ngrok tunnel:
-   ```bash
-   ngrok start --config ngrok.yml mattermost
-   ```
-
-5. Access your Mattermost instance using the Ngrok URL provided in the output
-
-Note: The Ngrok URL will change each time you restart the tunnel unless you have a paid Ngrok account with a reserved domain.
+## Need Help? 🆘
+If something's not working, try these steps:
+1. Make sure Docker Desktop is running
+2. Check if all the steps above are completed
+3. Try restarting your computer
+4. Ask for help from a grown-up or tech-savvy friend
 
 ## Project Structure
 
@@ -114,4 +97,30 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Support
 
-For issues and feature requests, please use the GitHub issue tracker. 
+For issues and feature requests, please use the GitHub issue tracker.
+
+## Development URLs 🔗
+
+### Mattermost Channel
+- AlertManager Dev Channel: http://138.68.249.92:8065/solheim-tech/channels/alertmanager-dev
+
+### Webhooks
+- AlertManager Webhook: http://138.68.249.92:8065/hooks/ou4n5jny43fp5mttzmdokpuh1a
+
+### Monitoring Integration 🔔
+
+#### AlertManager Configuration
+The Mattermost server is configured with AlertManager integration:
+- AlertManager URL: http://138.68.249.92:9093
+- Notification Channel: alertmanager-dev
+- Team: solheim-tech
+- Webhook Token: ou4n5jny43fp5mttzmdokpuh1a
+
+All Prometheus alerts will be automatically forwarded to the AlertManager dev channel.
+
+### Cool Technical Stuff (For the Grown-ups) 🔧
+
+Our development environment is set up with:
+- Server running on port: 8065
+- Database: PostgreSQL
+- Docker containers for easy setup 

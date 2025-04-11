@@ -80,6 +80,12 @@
 - [ ] Monitor error logs
 - [ ] Track performance metrics
 - [ ] Set up uptime monitoring
+- [ ] Verify AlertManager integration:
+  - [ ] Check AlertManager endpoint (http://138.68.249.92:9093)
+  - [ ] Verify webhook connectivity
+  - [ ] Test alert notifications in dev channel
+  - [ ] Review alert routing configuration
+  - [ ] Monitor alert latency and delivery
 
 ### Performance Optimization
 - [ ] Regular database optimization

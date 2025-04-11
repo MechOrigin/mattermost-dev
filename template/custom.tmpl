@@ -1,0 +1,10 @@
+{{ define "custom_message" }}
+[{{ .Status | toUpper }}{{ if eq .Status "firing" }}:{{ .Alerts.Firing | len }}{{ end }}] {{ if eq .Status "firing" }}🔥{{ else }}✅{{ end }}
+
+{{ range .Alerts }}
+**Alert:** {{ .Labels.alertname }}
+**Description:** {{ .Annotations.description }}
+**Severity:** {{ .Labels.severity }}
+**Instance:** {{ .Labels.instance }}
+
+{{ end }}{{ end }}

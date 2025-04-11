@@ -1,0 +1,12 @@
+{{ define "mattermost.default" }}
+{{ range .Alerts }}
+**[{{ .Labels.severity | toUpper }}]** {{ .Annotations.summary }}
+
+{{ .Annotations.description }}
+
+**Labels:**
+{{ range .Labels.SortedPairs }}
+• {{ .Name }}: {{ .Value }}
+{{ end }}
+{{ end }}
+{{ end }}

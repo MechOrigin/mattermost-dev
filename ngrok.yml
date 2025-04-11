@@ -1,8 +1,0 @@
-version: 2
-authtoken: ${NGROK_AUTH_TOKEN}  # You'll need to set this with your Ngrok auth token
-
-tunnels:
-  mattermost:
-    addr: 8065
-    proto: http
-    hostname: ${NGROK_HOSTNAME}  # Optional: Set if you have a reserved domain on Ngrok 

@@ -1,7 +1,7 @@
 {
     "ServiceSettings": {
-        "SiteURL": "http://localhost:8065",
-        "WebsocketURL": "",
+        "SiteURL": "http://138.68.249.92:8065",
+        "WebsocketURL": "ws://138.68.249.92:8065",
         "LicenseFileLocation": "",
         "ListenAddress": ":8065",
         "ConnectionSecurity": "",
@@ -492,7 +492,7 @@
         "GossipPort": 8074
     },
     "MetricsSettings": {
-        "Enable": false,
+        "Enable": true,
         "BlockProfileRate": 0,
         "ListenAddress": ":8067",
         "EnableClientMetrics": true,
@@ -597,6 +597,16 @@
         "Directory": "./plugins",
         "ClientDirectory": "./client/plugins",
         "Plugins": {
+            "alertmanager": {
+                "alertconfigs": {
+                    "0": {
+                        "alertmanagerurl": "http://138.68.249.92:9093",
+                        "channel": "alertmanager-dev",
+                        "team": "solheim-tech",
+                        "token": "ou4n5jny43fp5mttzmdokpuh1a"
+                    }
+                }
+            },
             "github": {
                 "connecttoprivatebydefault": false,
                 "enablecodepreview": "public",
@@ -628,6 +638,9 @@
             }
         },
         "PluginStates": {
+            "alertmanager": {
+                "Enable": true
+            },
             "com.mattermost.calls": {
                 "Enable": true
             },

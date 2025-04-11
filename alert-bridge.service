@@ -1,0 +1,13 @@
+[Unit]
+Description=AlertManager to Mattermost Bridge
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/alert-bridge
+ExecStart=/usr/local/bin/gunicorn --bind 0.0.0.0:9094 alert_bridge:app
+Restart=always
+
+[Install]
+WantedBy=multi-user.target 
